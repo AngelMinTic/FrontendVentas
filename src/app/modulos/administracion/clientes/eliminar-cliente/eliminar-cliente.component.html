@@ -1,0 +1,14 @@
+<div class="row">
+    <h3 class="center-align">Eliminar Cliente Definitivamente?</h3>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="EliminarCliente()" method="POST" action="formulario-contacto.php">
+            <input type="hidden" formControlName="id" />
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit"><i
+                        class="material-icons right">send</i>Eliminar</button>
+            </p>
+
+        </form>
+
+    </article>
+</div>

@@ -1,0 +1,54 @@
+<a routerLink="/administracion/crear-cliente" class="btn-floating btn-large waves-effect waves-light red">
+    <i class="material-icons">add</i>
+</a>
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>
+                Nombres
+            </th>
+            <th>
+                Apellidos
+            </th>
+            <th>
+                Direccion
+            </th>
+            <th>
+                Celular
+            </th>
+            <th>
+                Correo
+            </th>
+            <th>
+                Acciones
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros">
+            <td>
+                {{p.nombres}}
+            </td>
+            <td>
+                {{p.apellidos}}
+            </td>
+            <td>
+                {{p.direccion}}
+            </td>
+            <td>
+                {{p.celular}}
+            </td>
+            <td>
+                {{p.correo}}
+            </td>
+            <td>
+                <a routerLink="/administracion/editar-cliente/{{p.id}}" class="btn-floating btn-large waves-effect waves-light blue">
+                    <i class="material-icons">edit</i></a>&nbsp;
+                <a routerLink="/administracion/eliminar-cliente/{{p.id}}" class="btn-floating btn-large waves-effect waves-light red">
+                    <i class="material-icons">delete</i></a>&nbsp;
+                <a routerLink="/seguridad/cambioClave/{{p.id}}" class="btn-floating btn-large waves-effect waves-light red">
+                    <i class="material-icons">key</i></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
